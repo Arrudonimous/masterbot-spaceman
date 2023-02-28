@@ -3,11 +3,9 @@
 import { getCookie } from 'cookies-next'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { GiCommercialAirplane } from 'react-icons/gi'
 
-import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../public/MASTERBOT-LOGO.png';
+import Logo from '../public/SPACEMANLOGO.png';
 import Form from '../components/Form'
 
 export default function Home() {
@@ -30,7 +28,7 @@ export default function Home() {
         <div className="bg-white max-w-7xl md:max-h-[35rem] w-full h-full md:rounded-tl-[3.75rem] md:rounded-br-[3.75rem] flex flex-col md:flex-row md:justify-between overflow-hidden">
           <div className=" w-full md:w-1/2 bg-black px-8 py-10 flex justify-between flex-col">
             <div className='flex justify-center flex-col items-center'>
-              <Image src={Logo} alt="logo" className='w-full h-full'/>
+              <Image src={Logo} alt="logo" className='w-80'/>
             </div>
 
             <div className='flex gap-3 flex-col md:mt-0 mt-5 '>
@@ -40,7 +38,7 @@ export default function Home() {
 
               <div>
                 <a href={'https://pepper.com.br/checkout/index.html?p=16166&o=9056'} target="_blank" rel="noreferrer">
-                  <button className="text-white bg-[#ed114e] rounded-3xl w-full py-3 uppercase">
+                  <button className="text-white bg-[#7400ff] rounded-3xl w-full py-3 uppercase">
                     <h1 className="font-medium md:text-lg text-base">
                       Cadastre-se
                     </h1>
@@ -64,9 +62,9 @@ export default function Home() {
   }
   else{
     return(
-        <main className="flex items-center justify-center bg-base w-[100vw] h-[100vh]">
-           <svg className="animate-spin h-12 w-12 border-t border-r border-t-green border-r-red rounded-full" viewBox="20 20 24 24"></svg>
-        </main>
+      <main className="flex items-center justify-center bg-base w-[100vw] h-[100vh]">
+        <svg className="animate-spin h-12 w-12 border-t border-r border-t-green border-r-red rounded-full" viewBox="20 20 24 24"></svg>
+      </main>
     )
   }
 }

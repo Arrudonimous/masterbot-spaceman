@@ -5,7 +5,7 @@ export default function loading(){
                 <div className="w-1/2 bg-black flex justify-center flex-col items-center gap-16">
                    <svg className="animate-spin h-12 w-12 border-t border-r border-t-green border-r-blue rounded-full" viewBox="20 20 24 24"></svg>
                 </div>
-                <div className="w-1/2 bg-[#ed114e] px-8 py-10 text-white flex justify-center items-center">
+                <div className="w-1/2 bg-white px-8 py-10 text-white flex justify-center items-center">
                     <svg className="animate-spin h-12 w-12 border-t border-r border-t-green border-r-blue rounded-full" viewBox="20 20 24 24"></svg>
                 </div>
             </div>

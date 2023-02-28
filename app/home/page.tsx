@@ -6,9 +6,9 @@ import { getCookie } from 'cookies-next'
 
 import NavBar from "../../components/NavBar";
 import AnimatedNumber from 'react-animated-number';
-import Logo from '../../public/MASTERBOT-LOGO.png';
+import Logo from '../../public/SPACEMANLOGO.png';
 import Image from 'next/image';
-import Helice from '../../public/helice.svg';
+import Sol from '../../public/SOL.png';
 
 export default function Home() {
   const router = useRouter();
@@ -65,20 +65,20 @@ export default function Home() {
 
   if(!isLoading){
     return (
-      <div className='bg-black'>
+      <div className='bg-base'>
 
-        <main className="flex flex-col bg-home bg-contain">
+        <main className="flex flex-col">
         <NavBar />
 
         <div className='w-full flex justify-center items-center'>
-          <Image src={Logo} alt="logo" className='md:max-w-lg'/>
+          <Image src={Logo} alt="logo" className='md:max-w-lg w-80'/>
         </div>
 
         <div className='md:px-20 md:py-20 py-20'>
           <div className='flex items-center justify-center flex-col'>
             {isSearching ? (
               <div>
-                <Image src={Helice} width={200} height={200} className="w-24 h-24 animate-spin duration-1000" alt='helice'/>
+                <Image src={Sol} width={200} height={200} className="w-24 h-24 animate-spin duration-1000" alt='helice'/>
               </div>
             ):(
               <button 
@@ -90,8 +90,8 @@ export default function Home() {
               </button>
             )}
 
-            <div className='flex flex-col md:flex-row mt-12 text-white mb-20 md:mb-32 justify-center items-center md:justify-around w-full gap-5 md:gap-0'>
-              <div className='w-3/4  md:w-1/3 bg-cover bg-background-botao bg-no-repeat md:h-40 rounded-3xl px-3 py-5 flex flex-col items-center drop-shadow-lg'>
+            <div className='flex flex-col md:flex-row mt-12 text-black mb-20 md:mb-32 justify-center items-center md:justify-around w-full gap-5 md:gap-0'>
+              <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-72 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
                 <h1 className='text-xl'>Primeiro Valor</h1>
                 <div className='w-full h-full flex justify-center items-center'>
                   <AnimatedNumber 
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className='w-3/4  md:w-1/3 bg-cover bg-background-botao bg-no-repeat md:h-40 rounded-3xl px-3 py-5 flex flex-col items-center drop-shadow-lg'>
+              <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-72 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
                 <h1 className='text-xl'>Segundo Valor</h1>
                 <div className='w-full h-full flex justify-center items-center'>
                   
@@ -119,9 +119,9 @@ export default function Home() {
             </div>
 
             
-            <a href='https://go.aff.estrelabetpartners.com/ogkf6ubw' target="_blank" rel='noreferrer' className='bg-[#ed114e] py-8 px-20  drop-shadow-xl rounded-xl border-2 border-red-500 hover:bg-[#f24073] active:bg-[#bf0d40] ease-in-out transition-colors'>
+            <a href='https://go.aff.estrelabetpartners.com/ogkf6ubw' target="_blank" rel='noreferrer' className='bg-[#7400ff] py-8 px-20  drop-shadow-xl rounded-xl border-2 border-[#7400ff] hover:bg-[#8422fd] active:bg-[#6404d9] ease-in-out transition-colors'>
               <h1 className='text-xl text-white'>
-                AVIATOR
+                SPACEMAN
               </h1>
             </a>
           </div>

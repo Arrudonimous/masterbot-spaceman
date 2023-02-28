@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        base: 'linear-gradient(to right bottom, #001431, #001f60, #002691, #0026c0, #1412eb);',
+        base: 'linear-gradient(90deg, rgba(18,0,36,1) 0%, rgba(233,0,231,1) 50%, rgba(116,0,255,1) 100%)',
         'background': "url('/wallpaper.png')",
         'home': "url('/ELEMENTOS-HOME.png')",
-        'background-botao': "url('/background-botao.png')"
+        'background-botao': "url('/SaturnButton.png')"
       }
     },
   },

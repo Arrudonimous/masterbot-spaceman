@@ -53,7 +53,7 @@ export default function Form(){
 
       setTimeout(()=>{
         router.push('/home')
-      }, 2100)
+      }, 1600)
 
 
     } catch (error: any){
@@ -68,7 +68,7 @@ export default function Form(){
       <form onSubmit={(e) => handleLogin(e)} className='w-full h-full flex flex-col justify-between'>
         <div className='mt-5 md:mt-20'>
           <label htmlFor="email" className='text-xl text-black'>Insira seu E-mail</label>
-          <div className="flex flex-row border-2 border-red-500 gap-5 px-4 py-3 rounded-3xl mb-5 md:mb-10 md:mt-2 mt-0">
+          <div className="flex flex-row border-2 border-[#7400ff] gap-5 px-4 py-3 rounded-3xl mb-5 md:mb-10 md:mt-2 mt-0">
             <AiFillMail size={30}/>
             <input 
               type="text" 
@@ -81,7 +81,7 @@ export default function Form(){
           </div>
 
           <label htmlFor="password" className='text-xl text-black'>Insira sua Senha</label>
-          <div className="flex flex-row border-2 border-red-500 gap-5 px-4 py-3 rounded-3xl md:mb-20 mb-5 mt-2">
+          <div className="flex flex-row border-2 border-[#7400ff] gap-5 px-4 py-3 rounded-3xl md:mb-20 mb-5 mt-2">
             <AiFillLock size={30}/>
             <input 
               type="password" 
@@ -96,19 +96,19 @@ export default function Form(){
 
         <div>
           {!isLoading ? (
-            <button className="text-white bg-[#ed114e] rounded-3xl w-full py-3 uppercase">
+            <button className="text-white bg-[#7400ff] rounded-3xl w-full py-3 uppercase">
               <h1 className="font-medium md:text-xl text-lg">
                 Entrar
               </h1>
             </button>
           ): (
-           <button type="button" className="text-white bg-[#ed114e] rounded-3xl w-full py-3 uppercase flex items-center justify-center" disabled>
+           <button type="button" className="text-white bg-[#7400ff] rounded-3xl w-full py-3 uppercase flex items-center justify-center" disabled>
               <svg className="animate-spin h-7 w-7 border-t border-r border-t-green border-r-red rounded-full" viewBox="20 20 24 24"></svg>
             </button>
           )}
         </div>
       </form>
-      <ToastContainer autoClose={2000}/>
+      <ToastContainer autoClose={1500}/>
     </>
   )
 }
