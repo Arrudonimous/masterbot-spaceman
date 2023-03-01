@@ -17,15 +17,15 @@ export default function Home() {
   const [number1, setNumber1 ] = useState(0)
   const [number2, setNumber2 ] = useState(0)
 
-  // useEffect(()=>{
-  //   setIsLoading(true)
-  //   const token = getCookie('token');
-  //   if(!token){
-  //     setIsLoading(false)
-  //     return router.push('/')
-  //   }
-  //   setIsLoading(false)
-  // },[])
+  useEffect(()=>{
+    setIsLoading(true)
+    const token = getCookie('token');
+    if(!token){
+      setIsLoading(false)
+      return router.push('/')
+    }
+    setIsLoading(false)
+  },[])
 
   function getRandomInt(min: number, max: number) {
     return ((Math.random() * (max - min + 1)) + min).toFixed(2);
