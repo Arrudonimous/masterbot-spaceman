@@ -5,5 +5,11 @@
 
 button:hover {
   cursor: pointer;
-
 }
+
+#neonButton{
+
+  box-shadow: inset 0 0 32px 0 rgb(236 72 153 / var(--tw-border-opacity)), 0 0 32px 0 #7400ff;
+  text-shadow: 0 0 8px hsl(0 0% 100% / 0.3), 0 0 32px;
+}
+

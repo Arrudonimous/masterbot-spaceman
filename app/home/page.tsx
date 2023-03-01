@@ -85,7 +85,8 @@ export default function Home() {
                 onClick={()=>{
                   getValues();
                 }}
-                className='bg-blue-800 px-24 py-6 text-lg rounded-xl text-white drop-shadow-md border-2 border-blue-500 hover:bg-blue-600 ease-in-out transition-colors active:bg-blue-900'>
+                id='neonButton'
+                className='bg-transparent px-24 py-6 text-lg rounded-xl text-white drop-shadow-md border-2 border-pink-500 hover:border-pink-300 ease-in-out transition-colors active:border-blue-600'>
                 DECOLAR
               </button>
             )}
@@ -119,7 +120,7 @@ export default function Home() {
             </div>
 
             
-            <a href='https://go.aff.estrelabetpartners.com/ogkf6ubw' target="_blank" rel='noreferrer' className='bg-[#7400ff] py-8 px-20  drop-shadow-xl rounded-xl border-2 border-[#7400ff] hover:bg-[#8422fd] active:bg-[#6404d9] ease-in-out transition-colors'>
+            <a href='https://go.aff.estrelabetpartners.com/ogkf6ubw' target="_blank" rel='noreferrer' id='neonButton'  className='bg-transparent py-8 px-20  drop-shadow-xl rounded-xl border-2 border-[#7400ff] hover:border-[#8422fd] active:border-[#6404d9] ease-in-out transition-colors'>
               <h1 className='text-xl text-white'>
                 SPACEMAN
               </h1>
