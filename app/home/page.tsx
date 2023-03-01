@@ -71,11 +71,12 @@ export default function Home() {
         <NavBar />
 
         <div className='w-full flex justify-center items-center'>
-          <Image src={Logo} alt="logo" className='md:max-w-lg w-80'/>
+          <Image src={Logo} alt="logo" className='w-80'/>
         </div>
 
-        <div className='md:px-20 md:py-20 py-20'>
+        <div className='md:px-20 pt-12'>
           <div className='flex items-center justify-center flex-col'>
+            <h1 className='flex text-white mb-12 text-2xl'>Clique aqui para gerar sinais</h1>
             {isSearching ? (
               <div>
                 <Image src={Sol} width={200} height={200} className="w-24 h-24 animate-spin duration-1000" alt='helice'/>
@@ -118,13 +119,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            
-            <a href='https://go.aff.estrelabetpartners.com/ogkf6ubw' target="_blank" rel='noreferrer' id='neonButton'  className='bg-transparent py-8 px-20  drop-shadow-xl rounded-xl border-2 border-[#7400ff] hover:border-[#8422fd] active:border-[#6404d9] ease-in-out transition-colors'>
-              <h1 className='text-xl text-white'>
-                SPACEMAN
-              </h1>
-            </a>
           </div>
         </div>
       </main>

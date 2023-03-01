@@ -26,12 +26,12 @@ export default function Home() {
     return (
       <main className="flex items-center justify-center bg-base w-full h-full md:w-[100vw] md:h-[100vh]">
         <div className="bg-white max-w-7xl md:max-h-[35rem] w-full h-full md:rounded-tl-[3.75rem] md:rounded-br-[3.75rem] flex flex-col md:flex-row md:justify-between overflow-hidden">
-          <div className=" w-full md:w-1/2 bg-black px-8 py-10 flex justify-between flex-col">
+          <div className=" w-full md:w-1/2 bg-black px-8 py-2 flex justify-around flex-col">
             <div className='flex justify-center flex-col items-center'>
-              <Image src={Logo} alt="logo" className='w-80'/>
+              <Image src={Logo} alt="logo" className='md:w-80 w-48'/>
             </div>
 
-            <div className='flex gap-3 flex-col md:mt-0 mt-5 '>
+            <div className='flex gap-3 flex-col'>
               <div className='flex items-center justify-center'>
                 <h2 className='text-white md:text-2xl text-xl'>Ainda não tem acesso?</h2>
               </div>
@@ -52,9 +52,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full h-full md:w-1/2 bg-white px-8 py-10 text-black flex justify-between flex-col items-center">
+          <div className="w-full h-full md:w-1/2 bg-white px-8 py-5 text-black flex justify-between flex-col items-center">
             <h1 className=' text-lg md:text-2xl'>Conecte-se para ter acesso aos sinais</h1>
             <Form />
+            <h1 className='text-black mt-5'><a href="/register" className="underline text-black" >Esqueceu a senha?</a></h1>
           </div>
         </div>
       </main>
