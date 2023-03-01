@@ -26,28 +26,28 @@ export default function Form(){
     setIsLoading(true);
 
     try {
-      // const options = {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     email,
-      //     password
-      //   }),
-      // };
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password
+        }),
+      };
 
-      // const data = await fetch('/api/login', options);
-      // const response = await data.json();
+      const data = await fetch('/api/login', options);
+      const response = await data.json();
 
-      // if(!data.ok){
-      //   setIsLoading(false)
-      //   return toast.error(response.message)
-      // }
+      if(!data.ok){
+        setIsLoading(false)
+        return toast.error(response.message)
+      }
 
-      // clearInputs();
-      // toast.success(response.message)
-      // setCookie('token', response.token)
+      clearInputs();
+      toast.success(response.message)
+      setCookie('token', response.token)
       setIsLoading(false)
 
 
