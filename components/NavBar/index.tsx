@@ -12,10 +12,13 @@ Modal.setAppElement('#root')
 
 export default function NavBar(){
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
   function handleLogout(){
+    setIsLoading(true);
     deleteCookie('token');
+    setIsLoading(false);
     router.push('/')
   }
 
@@ -44,8 +47,22 @@ export default function NavBar(){
       onRequestClose={handleChangeModal}
       contentLabel="Example modal"
       overlayClassName="modal-overlay"
+      className="absolute top-20 px-10 py-6 right-16 justify-between bg-white rounded-xl"
     >
-      oi
+      <div className='flex flex-col justify-between gap-5'>
+        <h1>
+          Deseja sair da conta?
+        </h1>
+
+        <div className='flex gap-2'>
+          <button className='w-1/2 bg-gray-200 px-2 py-1 rounded-md' onClick={handleChangeModal}>
+            Voltar
+          </button>
+          <button className='w-1/2 bg-red-500 px-2 py-1 rounded-md' onClick={handleLogout}>
+            Sair
+          </button>
+        </div>
+      </div>
     </Modal>
     </>
   )
