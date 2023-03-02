@@ -26,7 +26,7 @@ export default function Home() {
     return (
       <main className="flex items-center justify-center bg-base w-full h-full md:w-[100vw] md:h-[100vh]">
         <div className="bg-white max-w-7xl md:max-h-[35rem] w-full h-full md:rounded-tl-[3.75rem] md:rounded-br-[3.75rem] flex flex-col md:flex-row md:justify-between overflow-hidden">
-          <div className=" w-full md:w-1/2 bg-black px-8 py-8+ flex justify-around flex-col gap-2">
+          <div className=" w-full md:w-1/2 bg-black px-8 py-8 flex justify-around flex-col gap-2">
             <div className='flex justify-center flex-col items-center'>
               <Image src={Logo} alt="logo" className='md:w-80 w-64'/>
               <h1 className='text-[#F2DAC3] backdrop-blur-sm md:text-2xl text-md italic font-semibold bg-[#07032B] rounded-b-lg px-3 -mt-2 md:w-72 w-56  items-center justify-center flex'>Alpha</h1>
