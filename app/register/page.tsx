@@ -1,7 +1,7 @@
 import Form from '../../components/FormRegister'
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../../public/SPACEMANLOGO.png';
+import Logo from '../../public/SPACEMANLOGO.PNG';
 
 
 
