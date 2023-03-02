@@ -79,7 +79,7 @@ export default function Home() {
             <h1 className='flex text-white mb-4 text-2xl'>Clique aqui para gerar sinais</h1>
             {isSearching ? (
               <div>
-                <Image src={Sol} width={200} height={200} className="w-24 h-24 animate-spin duration-1000" alt='helice'/>
+                <Image src={Sol} width={200} height={200} className="w-20 h-20 animate-spin duration-1000" alt='helice'/>
               </div>
             ):(
               <button 

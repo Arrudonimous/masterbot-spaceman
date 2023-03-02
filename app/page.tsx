@@ -26,9 +26,10 @@ export default function Home() {
     return (
       <main className="flex items-center justify-center bg-base w-full h-full md:w-[100vw] md:h-[100vh]">
         <div className="bg-white max-w-7xl md:max-h-[35rem] w-full h-full md:rounded-tl-[3.75rem] md:rounded-br-[3.75rem] flex flex-col md:flex-row md:justify-between overflow-hidden">
-          <div className=" w-full md:w-1/2 bg-black px-8 py-2 flex justify-around flex-col">
+          <div className=" w-full md:w-1/2 bg-black px-8 py-12 flex justify-around flex-col gap-2">
             <div className='flex justify-center flex-col items-center'>
-              <Image src={Logo} alt="logo" className='md:w-80 w-48'/>
+              <Image src={Logo} alt="logo" className='md:w-80 w-64'/>
+              <h1 className='text-[#F2DAC3] backdrop-blur-sm md:text-2xl text-md italic font-semibold bg-[#07032B] rounded-b-lg px-3 -mt-2 md:w-72 w-56  items-center justify-center flex'>Alpha</h1>
             </div>
 
             <div className='flex gap-3 flex-col'>
@@ -37,17 +38,13 @@ export default function Home() {
               </div>
 
               <div>
-                <a href={'https://pepper.com.br/checkout/index.html?p=16166&o=9056'} target="_blank" rel="noreferrer">
+                <a href='/register'>
                   <button className="text-white bg-[#7400ff] rounded-3xl w-full py-3 uppercase">
                     <h1 className="font-medium md:text-lg text-base">
                       Cadastre-se
                     </h1>
                   </button>
                 </a>
-
-                <div className='flex justify-center items-center mt-5'>
-                  <h1 className='text-white'>Crie a conta <a href="/register" className="underline text-blue-100" >aqui</a></h1>
-                </div>
               </div>
             </div>
           </div>

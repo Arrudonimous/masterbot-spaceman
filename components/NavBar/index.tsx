@@ -37,9 +37,15 @@ export default function NavBar(){
       </div> */}
 
       <div>
-        <button onClick={handleChangeModal}>
-          <MdOutlineExitToApp size={40} color='#ffffff'/>
-        </button>
+        {modalIsOpen?(
+          <button onClick={handleChangeModal} className="bg-purple-800 rounded-lg">
+            <MdOutlineExitToApp size={40} color='#ffffff'/>
+          </button>
+        ):(
+          <button onClick={handleChangeModal}>
+            <MdOutlineExitToApp size={40} color='#ffffff'/>
+          </button>
+        )}
       </div>
     </nav>
     <Modal 
@@ -47,7 +53,7 @@ export default function NavBar(){
       onRequestClose={handleChangeModal}
       contentLabel="Example modal"
       overlayClassName="modal-overlay"
-      className="absolute top-20 px-10 py-6 right-16 justify-between bg-white rounded-xl"
+      className="absolute top-12 px-10 py-6 md:right-16 right-2 justify-between bg-white rounded-xl"
     >
       <div className='flex flex-col justify-between gap-5'>
         <h1>
