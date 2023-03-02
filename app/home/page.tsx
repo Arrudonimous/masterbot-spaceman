@@ -6,7 +6,7 @@ import { getCookie } from 'cookies-next'
 
 import NavBar from "../../components/NavBar";
 import AnimatedNumber from 'react-animated-number';
-import Logo from '../../public/SPACEMANLOGO.PNG';
+import Logo from '../../public/SPACEMANLOGO.png';
 import Image from 'next/image';
 import Sol from '../../public/SOL.png';
 
@@ -71,7 +71,6 @@ export default function Home() {
 
         <div className='w-full flex justify-center items-center flex-col mb-12'>
           <Image src={Logo} alt="logo" className='w-80'/>
-          <h1 className='text-[#F2DAC3] backdrop-blur-sm text-2xl italic font-semibold bg-[#07032B] rounded-b-lg px-3 -mt-2 w-72 items-center justify-center flex'>Alpha</h1>
         </div>
 
         <div className='md:px-20'>
