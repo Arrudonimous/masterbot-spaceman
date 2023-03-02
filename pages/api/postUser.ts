@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../prisma/client'
-import bcrypt from 'bcrypt'
 
 type Data = {
   message: string;
@@ -44,15 +43,11 @@ export default async function handler(
     if(emailAlreadyExists){
       return res.status(400).json({ message: 'Email já cadastrado na plataforma' })
     }
-    
-    const saltRounds = 7;
-    const salt = bcrypt.genSaltSync(saltRounds);
-    const hashedPassword = bcrypt.hashSync(password1, salt)
 
     const createdUser = await prisma.user.create({ 
       data:{
         email,
-        password: hashedPassword
+        password: password1
       },
       select:{
         id: true,

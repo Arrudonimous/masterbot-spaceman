@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../prisma/client'
-import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
 type Data = {
@@ -39,8 +38,7 @@ export default async function handler(
       return res.status(400).json({ message: 'Cadastro não encontrado em nossa plataforma' })
     }
 
-    const verifyPass = await bcrypt.compare(password, emailAlreadyExists.password)
-    if(!verifyPass){
+    if(password !== emailAlreadyExists.password){
       return res.status(400).json({ message: 'Senha incorreta. Tente novamente!' })
     }
 
@@ -49,6 +47,25 @@ export default async function handler(
     })
 
     return res.json({message: 'Usuário logado com sucesso', token })
+  }
 
+  if(req.method === 'PUT'){
+    const { id, password } = req.body;
+
+    const updatedPass = await prisma.user.update({
+      data:{
+        password,
+      },
+      where: {
+        id,
+      },
+      select:{
+        email:true,
+        id:true,
+        password: true,
+      }
+    })
+
+    return res.json({message: "Senha alterada"})
   }
 }

@@ -52,7 +52,7 @@ export default function Home() {
           <div className="w-full h-full md:w-1/2 bg-white px-8 py-5 text-black flex justify-between flex-col items-center">
             <h1 className=' text-lg md:text-2xl'>Conecte-se para ter acesso aos sinais</h1>
             <Form />
-            <h1 className='text-black mt-5'><a href="/register" className="underline text-black" >Esqueceu a senha?</a></h1>
+            <h1 className='text-black mt-5'><a href="https://t.me/EspacemanAlphaSenhas" target="_blank" rel="noreferrer" className="underline text-black" >Esqueceu a senha?</a></h1>
           </div>
         </div>
       </main>
