@@ -66,9 +66,9 @@ export default function Form(){
   return(
     <>
       <form onSubmit={(e) => handleLogin(e)} className='w-full h-full flex flex-col justify-between'>
-        <div className='mt-5 md:mt-20'>
+        <div className='mt-2 md:mt-20'>
           <label htmlFor="email" className='text-xl text-black'>Insira seu E-mail</label>
-          <div className="flex flex-row border-2 border-[#7400ff] gap-5 px-4 py-3 rounded-3xl mb-5 md:mb-10 md:mt-2 mt-0">
+          <div className="flex flex-row border-2 border-[#7400ff] gap-5 px-4 py-3 rounded-3xl mb-2 md:mb-10 md:mt-2 mt-0">
             <AiFillMail size={30}/>
             <input 
               type="text" 
