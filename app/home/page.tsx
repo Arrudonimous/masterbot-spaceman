@@ -70,7 +70,7 @@ export default function Home() {
         <NavBar />
 
         <div className='w-full flex justify-center items-center flex-col mb-3'>
-          <Image src={Logo} alt="logo" className='md:w-72 w-40'/>
+          <Image src={Logo} alt="logo" className='md:w-72 w-56'/>
         </div>
 
         <div className='md:px-20'>
@@ -91,7 +91,7 @@ export default function Home() {
               </button>
             )}
 
-            <div className='flex flex-col md:flex-row mt-4 text-black justify-center items-center md:justify-around w-full gap-5 md:gap-0 mb-32 md:mb-0'>
+            <div className='flex flex-col md:flex-row mt-20 text-black justify-center items-center md:justify-around w-full gap-5 md:gap-0 mb-32 md:mb-0'>
               <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-48 md:h-60 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
                 <h1 className='text-xl'>Primeiro Valor</h1>
                 <div className='w-full h-full flex justify-center items-center'>
