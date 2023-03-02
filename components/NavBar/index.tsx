@@ -31,7 +31,7 @@ export default function NavBar(){
 
   return(
     <>
-    <nav className="w-full bg-transparent h-20 md:px-16 flex items-center justify-end ">
+    <nav className="w-full bg-transparent h-14 md:px-16 flex items-center justify-end ">
       {/* <div className='md:flex flex-row items-center gap-5 hidden '>
         <h1 className='text-white text-xl font-semibold '>MasterBot - Spaceman</h1>
       </div> */}

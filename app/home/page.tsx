@@ -66,17 +66,17 @@ export default function Home() {
   if(!isLoading){
     return (
       <div className='bg-base'>
-
         <main className="flex flex-col">
         <NavBar />
 
-        <div className='w-full flex justify-center items-center'>
+        <div className='w-full flex justify-center items-center flex-col mb-12'>
           <Image src={Logo} alt="logo" className='w-80'/>
+          <h1 className='text-[#F2DAC3] backdrop-blur-sm text-2xl italic font-semibold bg-[#07032B] rounded-b-lg px-3 -mt-2 w-72 items-center justify-center flex'>Alpha</h1>
         </div>
 
-        <div className='md:px-20 pt-12'>
+        <div className='md:px-20'>
           <div className='flex items-center justify-center flex-col'>
-            <h1 className='flex text-white mb-12 text-2xl'>Clique aqui para gerar sinais</h1>
+            <h1 className='flex text-white mb-4 text-2xl'>Clique aqui para gerar sinais</h1>
             {isSearching ? (
               <div>
                 <Image src={Sol} width={200} height={200} className="w-24 h-24 animate-spin duration-1000" alt='helice'/>
@@ -92,8 +92,8 @@ export default function Home() {
               </button>
             )}
 
-            <div className='flex flex-col md:flex-row mt-12 text-black mb-20 md:mb-32 justify-center items-center md:justify-around w-full gap-5 md:gap-0'>
-              <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-72 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
+            <div className='flex flex-col md:flex-row mt-4 text-black mb-20 md:mb-32 justify-center items-center md:justify-around w-full gap-5 md:gap-0'>
+              <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-60 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
                 <h1 className='text-xl'>Primeiro Valor</h1>
                 <div className='w-full h-full flex justify-center items-center'>
                   <AnimatedNumber 
@@ -105,7 +105,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-72 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
+              <div className='w-3/4 md:w-1/3 bg-background-botao bg-contain h-60 bg-center bg-no-repeat rounded-3xl px-3 py-16 flex flex-col  drop-shadow-lg items-center'>
                 <h1 className='text-xl'>Segundo Valor</h1>
                 <div className='w-full h-full flex justify-center items-center'>
                   
