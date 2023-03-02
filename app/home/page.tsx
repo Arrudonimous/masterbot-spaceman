@@ -6,7 +6,7 @@ import { getCookie } from 'cookies-next'
 
 import NavBar from "../../components/NavBar";
 import AnimatedNumber from 'react-animated-number';
-import Logo from '../../public/SPACEMANLOGO.png';
+import Logo from '../../public/SPACEMANLOGO.PNG';
 import Image from 'next/image';
 import Sol from '../../public/SOL.png';
 
