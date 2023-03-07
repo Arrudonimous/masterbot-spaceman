@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import { getCookie } from 'cookies-next'
+import { AdminContext } from '@/contexts/adminContext';
 
 import NavBar from "../../components/NavBar";
 import AnimatedNumber from 'react-animated-number';
@@ -16,6 +17,8 @@ export default function Home() {
   const [isSearching, setIsSearching] = useState(false)
   const [number1, setNumber1 ] = useState(0)
   const [number2, setNumber2 ] = useState(0)
+
+  const context = useContext(AdminContext);
 
   useEffect(()=>{
     setIsLoading(true)
@@ -42,23 +45,30 @@ export default function Home() {
     setTimeout(()=>{
       setIsSearching(false);
 
-      if(randomNumber1 < 8){
-        const value1 = getRandomInt(1, 2);
-        setNumber1(parseFloat(value1))
-      }
-      else if(randomNumber1 >= 8){
-        const value1 = getRandomInt(5, 5);
-        setNumber1(parseFloat(value1))
-      }
+      if(!context.isAdmin){
+        if(randomNumber1 < 8){
+          const value1 = getRandomInt(1, 2);
+          setNumber1(parseFloat(value1))
+        }
+        else if(randomNumber1 >= 8){
+          const value1 = getRandomInt(5, 5);
+          setNumber1(parseFloat(value1))
+        }
 
-      if(randomNumber2 < 8){
-        const value2 = getRandomInt(1, 2);
-        setNumber2(parseFloat(value2))
+        if(randomNumber2 < 8){
+          const value2 = getRandomInt(1, 2);
+          setNumber2(parseFloat(value2))
+        }
+        else if(randomNumber2 >= 8){
+          const value2 = getRandomInt(5, 5);
+          setNumber2(parseFloat(value2))
+        }
       }
-      else if(randomNumber2 >= 8){
-        const value2 = getRandomInt(5, 5);
-        setNumber2(parseFloat(value2))
+      else{
+        setNumber1(42.3)
+        setNumber2(39.5)
       }
+      
     }, 2700)
   }
 

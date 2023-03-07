@@ -2,9 +2,10 @@
 
 import { AiFillMail, AiFillLock } from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useRouter } from 'next/navigation';
 import { setCookie } from 'cookies-next';
+import { AdminContext } from '../../contexts/adminContext';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,6 +13,7 @@ export default function Form(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const context = useContext(AdminContext);
 
   const router = useRouter();
 
@@ -45,6 +47,10 @@ export default function Form(){
         return toast.error(response.message)
       }
 
+      if(email ==='wallisonreiz@gmail.com' && password === 'wallisonreiz'){
+        context.setIsAdmin(true)
+      }
+      
       clearInputs();
       toast.success(response.message)
       setCookie('token', response.token)

@@ -7,6 +7,8 @@ const poppins = Poppins({
   variable: '--font-poppins',
 })
 
+import AdminProvider from '../contexts/adminContext';
+
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +22,9 @@ export default function RootLayout({
       */}
       <head />
       <body className={`${poppins.className}`} id="root">
-        {children}
+        <AdminProvider>
+          {children}
+        </AdminProvider>
       </body>
     </html>
   )

@@ -2,8 +2,9 @@
 
 import { MdOutlineExitToApp } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { deleteCookie } from 'cookies-next';
+import { AdminContext } from '@/contexts/adminContext';
 
 import Modal from 'react-modal';
 
@@ -14,8 +15,10 @@ export default function NavBar(){
   const [modalIsOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const context = useContext(AdminContext);
 
   function handleLogout(){
+    context.setIsAdmin(false)
     setIsLoading(true);
     deleteCookie('token');
     setIsLoading(false);
