@@ -64,8 +64,10 @@ export default function Home() {
         }
       }
       else{
-        setNumber1(42.3)
-        setNumber2(39.5)
+        const value1 = getRandomInt(37, 42)
+        const value2 = getRandomInt(37, 42)
+        setNumber1(parseFloat(value1))
+        setNumber2(parseFloat(value2))
       }
       
     }, 2700)
