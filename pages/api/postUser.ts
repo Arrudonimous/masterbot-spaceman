@@ -18,6 +18,11 @@ export default async function handler(
     
     const { email, password1, password2 } = req.body;
 
+
+    if(!email || !password1 || !password2){
+      return res.status(400).json({ message: 'Por favor, preencha todos os campos de registro' })
+    }
+
     if(!email.trim() || !password1.trim() || !password2.trim()){
       return res.status(400).json({ message: 'Por favor, preencha todos os campos de registro' })
     }
@@ -44,19 +49,23 @@ export default async function handler(
       return res.status(400).json({ message: 'Email já cadastrado na plataforma' })
     }
 
-    const createdUser = await prisma.user.create({ 
-      data:{
-        email,
-        password: password1
-      },
-      select:{
-        id: true,
-        email: true,
-        password: true,
-      }
-    })
+    try {
+      const createdUser = await prisma.user.create({ 
+        data:{
+          email,
+          password: password1
+        },
+        select:{
+          id: true,
+          email: true,
+          password: true,
+        }
+      })
 
-    return res.status(201).json({ message: 'Email cadastrado com sucesso', createdUser });
+      return res.status(201).json({ message: 'Email cadastrado com sucesso', createdUser });
+    } catch (error: any) {
+      return res.status(500).json({message: error})
+    }
   }
   else{
     return res.status(500).json({ message: 'Método não disponível para essa requisição' })
