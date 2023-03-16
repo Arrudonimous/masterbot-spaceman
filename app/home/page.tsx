@@ -17,6 +17,8 @@ export default function Home() {
   const [number1, setNumber1 ] = useState(0)
   const [number2, setNumber2 ] = useState(0)
   const isAdmin = getCookie('admin')
+  const values = [26, 28, 29, 29.3, 29.5, 30.2, 31]
+  const [index, setIndex] = useState(0)
 
 
   useEffect(()=>{
@@ -64,13 +66,17 @@ export default function Home() {
         }
       }
       else{
-        const value1 = getRandomInt(37, 42)
-        const value2 = getRandomInt(37, 42)
-        setNumber1(parseFloat(value1))
-        setNumber2(parseFloat(value2))
+        setNumber1(values[index])
+        setNumber2(values[index])
+        if(index < (values.length - 1)){
+          setIndex(index+1)
+        }
+        else if(index === (values.length - 1)){
+          setIndex(0)
+        }
       }
       
-    }, 2700)
+    }, 2200)
   }
 
 
