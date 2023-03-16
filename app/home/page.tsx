@@ -67,7 +67,7 @@ export default function Home() {
       }
       else{
         setNumber1(values[index])
-        setNumber2(values[index])
+        setNumber2(values[index] + 1.5)
         if(index < (values.length - 1)){
           setIndex(index+1)
         }
