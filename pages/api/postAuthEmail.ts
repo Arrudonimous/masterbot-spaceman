@@ -11,7 +11,8 @@ export default async function handler(
 ) {
   if(req.method === 'POST'){
     
-    const { email } = req.body;
+    const { customer } = req.body;
+    const email = customer.email;
     const emailAlreadyExists = await prisma.autorizedEmail.findFirst({
       where:{
         email
